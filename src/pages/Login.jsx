@@ -17,7 +17,7 @@ const Login = () => {
       .then(async (userCredential) => {
         const user = userCredential.user
 
-        const { data } = await axios.post('http://localhost:8888/api/auth/signin', {
+        const { data } = await axios.post('http://191.101.1.241/api/auth/signin', {
           userId: user.uid
         })
 
@@ -35,7 +35,7 @@ const Login = () => {
       .then(async (userCredential) => {
         const user = userCredential.user
 
-        const { data } = await axios.post('http://localhost:8888/api/auth/signin', {
+        const { data } = await axios.post('http://191.101.1.241/api/auth/signin', {
           userId: user.uid
         })
 
@@ -51,7 +51,7 @@ const Login = () => {
       .then(async (userCredential) => {
         const user = userCredential.user
 
-        const { data } = await axios.post('http://localhost:8888/api/auth/signin', {
+        const { data } = await axios.post('http://191.101.1.241/api/auth/signin', {
           userId: user.uid
         })
 

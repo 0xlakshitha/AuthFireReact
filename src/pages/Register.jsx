@@ -28,7 +28,7 @@ const Register = () => {
         
         const user = userCredential.user
 
-        const { data } = await axios.post('http://localhost:8888/api/auth/signup', {
+        const { data } = await axios.post('http://191.101.1.241/api/auth/signup', {
           userId: user.uid,
           email,
           firstName,
@@ -43,6 +43,27 @@ const Register = () => {
         console.log(error)
       })
 
+    // try {
+    //   // const { data } = await axios.patch('https://api.bexvis.com/trading/close-signal', {
+    //   //   "signalId": "6482c3cc16cb5293cb5b3d08"
+    //   // })
+    //   const { data } = await axios.patch('https://api.bexvis.com/trader/update-settings/MgQ3MaqSmMhz6v6zhjKIU6sdxCH3', {
+    //     default_laverage: 10,
+    //     default_risk_percentage: 0.5,
+    //   }, {
+    //     headers: {
+        
+    //     },
+    //     withCredentials: true
+    //   })
+
+    //   console.log(data)
+    // } catch (error) {
+    //   console.log(error.response.data)
+    // }
+
+    
+
     console.log(firstName, lastName, email, password, confirmPassword)
   }
 
@@ -51,7 +72,7 @@ const Register = () => {
       .then( async (userCredential) => {
         const user = userCredential.user
 
-        const { data } = await axios.post('http://localhost:8888/api/auth/signup', {
+        const { data } = await axios.post('http://191.101.1.241/api/auth/signup', {
           userId: user.uid,
           email: user.email,
           firstName: user.displayName.split(' ')[0],
@@ -71,7 +92,7 @@ const Register = () => {
       .then(async (userCredential) => {
         const user = userCredential.user
 
-        const { data } = await axios.post('http://localhost:8888/api/auth/signup', {
+        const { data } = await axios.post('http://191.101.1.241/api/auth/signup', {
           userId: user.uid,
           email: user.email,
           firstName: user.displayName.split(' ')[0],
