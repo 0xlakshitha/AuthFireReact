@@ -28,6 +28,8 @@ const Register = () => {
         
         const user = userCredential.user
 
+        console.log(user)
+
         const { data } = await axios.post('http://191.101.1.241/api/auth/signup', {
           userId: user.uid,
           email,
@@ -47,15 +49,18 @@ const Register = () => {
     //   // const { data } = await axios.patch('https://api.bexvis.com/trading/close-signal', {
     //   //   "signalId": "6482c3cc16cb5293cb5b3d08"
     //   // })
-    //   const { data } = await axios.patch('https://api.bexvis.com/trader/update-settings/MgQ3MaqSmMhz6v6zhjKIU6sdxCH3', {
-    //     default_laverage: 10,
-    //     default_risk_percentage: 0.5,
-    //   }, {
-    //     headers: {
+    //   // const { data } = await axios.patch('https://api.bexvis.com/trader/update-settings/MgQ3MaqSmMhz6v6zhjKIU6sdxCH3', {
+    //   //   default_laverage: 10,
+    //   //   default_risk_percentage: 0.5,
+    //   // }, {
+    //   //   headers: {
         
-    //     },
-    //     withCredentials: true
-    //   })
+    //   //   },
+    //   //   withCredentials: true
+    //   // })
+    //   const { data } = await axios.get('https://api.bexvis.com/trading/signal/64940d83374512f77484d300')
+
+    //   console.log(data)
 
     //   console.log(data)
     // } catch (error) {
